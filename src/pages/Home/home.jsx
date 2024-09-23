@@ -1,6 +1,6 @@
 import React from "react";
 //import "../Home/home.scss";
-//import Title from "../../components/Title/Title";
+import Title from "../../components/Title/Title";
 //import Presentation from "../../components/Presentation/Presentation";
 //import Competences from "../../components/Skills/Skills";
 //import Cards from "../../components/Réalisations/Réalisations";
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div>Home Page
     <main className="home-container ">
-    
+    <Title />
   
     </main>
     </div>
