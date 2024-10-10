@@ -1,5 +1,5 @@
 {
-  "short_name": "Portfolio ",
+  "short_name": "Portfolio",
   "name": "Portfolio Chahinez",
   "icons": [
     {
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo_chahinez",
+      "src": "logo_chahinez.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo_chahinez1",
+      "src": "logo_chahinez1.png",
       "type": "image/png",
       "sizes": "512x512"
     }

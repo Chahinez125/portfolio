@@ -3,7 +3,7 @@ import React from "react";
 import Title from "../../components/Title/Title";
 import Presentation from "../../components/Présentation/présentation";
 import Competences from "../../components/Competances/competance";
-//import Cards from "../../components/Réalisations/Réalisations";
+import Cards from "../../components/Réalisations/réalisation";
 //import BasicForm from "../../components/FormContact/Form";
 
 const Home = () => {
@@ -13,6 +13,7 @@ const Home = () => {
     <Title />
     <Presentation />
     <Competences />
+    <Cards />
   
     </main>
     </div>
