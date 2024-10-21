@@ -1,16 +1,20 @@
+
 @import "../../assets/scss/index.scss";
 
 $anim-dur: 1000ms;
 $anim-delay: calc($anim-dur / 8);
+
 .Skills {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 30px;
   background: linear-gradient(135deg, #f0f4f8, #cfd8dc);
+
   h2 {
     margin-bottom: 30px;
   }
+
   .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -24,42 +28,206 @@ $anim-delay: calc($anim-dur / 8);
     flex-direction: column;
     align-items: center;
     transition: transform 0.5s ease;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .skill-icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+
+    .skill-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: #4a4a4a;
+    }
   }
 
-  .skill:hover {
-    transform: scale(1.1);
+  /* ANIMATIONS POUR CHAQUE COMPÉTENCE */
+
+  .skill-html5 {
+    .skill-icon {
+      animation: bounce 1s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
   }
 
-  .skill-icon {
-    font-size: 64px;
-    margin-bottom: 16px;
+  .skill-css3 {
+    .skill-icon {
+      animation: rotate 2s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 
-  .skill-name {
-    font-size: 20px;
-    font-weight: 600;
-    color: #4a4a4a;
+  .skill-javascript {
+    .skill-icon {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
   }
 
-  
+  .skill-react {
+    .skill-icon {
+      animation: flip 1.5s ease-in-out infinite;
+    }
+
+    @keyframes flip {
+      0% {
+        transform: perspective(400px) rotateY(0deg);
+      }
+      100% {
+        transform: perspective(400px) rotateY(360deg);
+      }
+    }
+  }
+
+  .skill-sass {
+    .skill-icon {
+      animation: spin 2s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        transform: scale(1.1) rotate(180deg);
+      }
+      100% {
+        transform: scale(1) rotate(360deg);
+      }
+    }
+  }
+
+  .skill-nodejs {
+    .skill-icon {
+      animation: shake 1.5s ease-in-out infinite;
+    }
+
+    @keyframes shake {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-5px);
+      }
+      50% {
+        transform: translateX(5px);
+      }
+      75% {
+        transform: translateX(-5px);
+      }
+    }
+  }
+
+  .skill-mongodb {
+    .skill-icon {
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .skill-github {
+    .skill-icon {
+      animation: fadeInOut 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  /* ANIMATION DES BARRES DE CHARGEMENT */
   @keyframes bars {
     0% {
       transform: rotate(0deg);
     }
     100% {
-      transform:  rotate(360deg);
+      transform: rotate(360deg);
     }
   }
+
   .load__bar {
     display: inline-block;
     margin: 0 8px;
-    animation: bars $anim-dur backwards infinite ease-in-out alternate;
+    /*animation: bars $anim-dur infinite ease-in-out alternate;*/
+  }
 
-    @for $i from 1 through 8 {
-      &--#{$i} {
-        animation-delay: $anim-delay * $i;
-      }
-    }
+  /* Manuellement ajouter les classes avec délais différents */
+  .load__bar--1 {
+    animation-delay: $anim-delay * 1;
+  }
+
+  .load__bar--2 {
+    animation-delay: $anim-delay * 2;
+  }
+
+  .load__bar--3 {
+    animation-delay: $anim-delay * 3;
+  }
+
+  .load__bar--4 {
+    animation-delay: $anim-delay * 4;
+  }
+
+  .load__bar--5 {
+    animation-delay: $anim-delay * 5;
+  }
+
+  .load__bar--6 {
+    animation-delay: $anim-delay * 6;
+  }
+
+  .load__bar--7 {
+    animation-delay: $anim-delay * 7;
+  }
+
+  .load__bar--8 {
+    animation-delay: $anim-delay * 8;
   }
 
   .load__bar-inv {
@@ -69,15 +237,5 @@ $anim-delay: calc($anim-dur / 8);
     &:hover {
       animation-play-state: paused;
     }
-
-    @for $i from 1 through 8 {
-      &--#{$i} {
-        animation-delay: $anim-delay * $i;
-      }
-    }
   }
 }
-
-
-
-
