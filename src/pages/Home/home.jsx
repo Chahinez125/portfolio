@@ -8,7 +8,7 @@ import Cards from "../../components/Réalisations/réalisation";
 
 const Home = () => {
   return (
-    <div>Home Page
+    <div>
     <main className="home-container ">
     <Title />
     <Presentation />

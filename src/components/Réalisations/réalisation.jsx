@@ -1,5 +1,5 @@
 import React from "react";
-import dataRealisation from "../../dataRéalisation";  // Importation des données des projets
+import { dataRealisation } from "../../dataRealisation"; 
 import "./réalisation.scss";
 
 const Realisation = () => {
@@ -7,15 +7,30 @@ const Realisation = () => {
     <section id="realisations" className="realisations">
       <h2>Mes Réalisations</h2>
       <div className="projects-container">
-      {dataRealisation.map((project) => (
+        {dataRealisation.map((project) => (
           <div key={project.id} className="project-card">
-            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-              <img src={project.image} alt={project.title} className="project-image" />
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+              <div className="project-image-container">
+                <img src={project.image} alt={project.title} className="project-image" />
+                <div className="overlay">
+                  <div className="overlay-content">
+                    <p>{project.description}</p>
+                    <p><strong>Problématique:</strong> {project.problematic}</p>
+                  </div>
+                </div>
               </div>
             </a>
+            <div className="project-content">
+              <h3>{project.name}</h3>
+              <div className="technology-buttons">
+  {project.category.split(', ').map((tech, index) => (
+    <button key={index} className="tech-button">{tech}</button>
+  ))}
+  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-button">
+    Code GitHub
+  </a>
+</div>
+            </div>
           </div>
         ))}
       </div>
