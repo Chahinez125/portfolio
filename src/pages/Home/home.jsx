@@ -4,7 +4,7 @@ import Title from "../../components/Title/Title";
 import Presentation from "../../components/Présentation/présentation";
 import Competences from "../../components/Competances/competance";
 import Cards from "../../components/Réalisations/réalisation";
-//import BasicForm from "../../components/FormContact/Form";
+import BasicForm from "../../components/FormContact/From";
 
 const Home = () => {
   return (
@@ -14,6 +14,7 @@ const Home = () => {
     <Presentation />
     <Competences />
     <Cards />
+    <BasicForm />
   
     </main>
     </div>

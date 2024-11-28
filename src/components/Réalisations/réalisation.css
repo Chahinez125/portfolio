@@ -176,7 +176,7 @@
   border-radius: 10px;
 }
 .realisations .project-card .project-image-container .overlay:hover {
-  opacity: 1; /* Show overlay on hover */
+  opacity: 1;
 }
 .realisations .project-card .project-image-container .overlay .overlay-content {
   text-align: center;

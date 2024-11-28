@@ -16,6 +16,8 @@ const Realisation = () => {
                   <div className="overlay-content">
                     <p>{project.description}</p>
                     <p><strong>Problématique:</strong> {project.problematic}</p>
+                    {/* Ajout de la réalisation */}
+                    <p><strong>Réalisation:</strong> {project.Realisation}</p>
                   </div>
                 </div>
               </div>
@@ -23,13 +25,13 @@ const Realisation = () => {
             <div className="project-content">
               <h3>{project.name}</h3>
               <div className="technology-buttons">
-  {project.category.split(', ').map((tech, index) => (
-    <button key={index} className="tech-button">{tech}</button>
-  ))}
-  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-button">
-    Code GitHub
-  </a>
-</div>
+                {project.category.split(', ').map((tech, index) => (
+                  <button key={index} className="tech-button">{tech}</button>
+                ))}
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-button">
+                  Code GitHub
+                </a>
+              </div>
             </div>
           </div>
         ))}
