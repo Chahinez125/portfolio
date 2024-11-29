@@ -14,7 +14,7 @@ const Realisation = () => {
                 <img src={project.image} alt={project.title} className="project-image" />
                 <div className="overlay">
                   <div className="overlay-content">
-                    <p>{project.description}</p>
+                    <p>{/*project.description*/}</p>
                     <p><strong>Problématique:</strong> {project.problematic}</p>
                     {/* Ajout de la réalisation */}
                     <p><strong>Réalisation:</strong> {project.Realisation}</p>
@@ -24,6 +24,7 @@ const Realisation = () => {
             </a>
             <div className="project-content">
               <h3>{project.name}</h3>
+              <h4>{project.description}</h4>
               <div className="technology-buttons">
                 {project.category.split(', ').map((tech, index) => (
                   <button key={index} className="tech-button">{tech}</button>

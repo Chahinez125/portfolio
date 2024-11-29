@@ -134,6 +134,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
+    overflow: hidden;
     padding: 20px;
     transition: transform 0.3s ease;
     text-align: left;
@@ -149,6 +150,7 @@
       justify-content: center; 
       align-items: center; 
       width: 100%;
+      overflow: hidden;
       height: 200px; 
       overflow: hidden;
       
@@ -176,7 +178,7 @@
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -188,13 +190,19 @@
 
         .overlay-content {
           text-align: center;
-          padding: 10px;
+          transform: translateY(-100%);
+          padding: 0;
+          font-size: 14px;
+        }
+        &:hover {
+          transform: translateY(0); 
         }
       }
 
-      &:hover .overlay {
-        opacity: 1;
+      &:hover .overlay-content {
+        transform: translateY(0); 
       }
+    
     }
 
     .project-content {
