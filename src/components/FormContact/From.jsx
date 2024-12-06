@@ -9,8 +9,8 @@ const BasicForm = () => {
         <div className="Contact-frame">
           <div className="Contact-item">
             <strong>Téléphone :</strong>{" "}
-            <a href="tel:+1234567890" className="Contact-link">
-              +6 34 56 78 90
+            <a href="tel:+33 6 12 34 56 78" className="Contact-link">
+            +33 6 12 34 56 78
             </a>
           </div>
           <div className="Contact-item">
